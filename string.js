@@ -6,10 +6,12 @@ function PasswordMessage(m){
 }
 function inRange(char,min,max){
     let unicode = char.charCodeAt(0);
-    let char =
-    let min =
-    let max =
-    for()
+        if(unicode <= max && unicode >= min){
+            return true;
+        }
+        else{
+            return false;
+        }
 }
 
 exports.checkLength = function(str){
@@ -33,7 +35,10 @@ exports.checkLength = function(str){
 
 
 exports.containsUpper =function(str){
-
+    let hasUpper = false;
+    try{
+        
+    }
 }
 
 
