@@ -37,13 +37,39 @@ exports.checkLength = function(str){
 exports.containsUpper =function(str){
     let hasUpper = false;
     try{
-        
+        for(i = 0; i < str.length; i++){
+            if(str[i] >= 65 && str[i] <= 90){
+                return hasUpper = true;
+                throw new PasswordMessage("Has an uppercase character")
+            }
+            else{
+                throw new PasswordMessage("Does not have an uppercase character")
+            }
+        }
     }
+    catch (e){
+        console.log(e.name+""+e.message);
+        return hasUpper;
 }
 
 
 exports.containsLower =function(str){
-
+    let hasLower = false;
+    try{
+        for(i = 0; i <str.length; i++){
+            if(str[i] >= 97 && str[i] <= 122){
+                return hasLower = true;
+                throw new PasswordMessage("Has a lowercase character");
+            }
+            else{
+                throw new PasswordMessage("Does not have a lowercase character");
+            }
+        }
+    }
+    catch (e){
+        console.log(e.name+""e.message);
+        return hasLower;
+    }
 }
 
 
